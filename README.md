@@ -4,13 +4,10 @@
 
 Hello! I am Maximiliano Maciel, a student of the Web Development Degree at the National University of La Matanza. I am a person with a great desire to learn and grow professionally, always willing to face new challenges and improve my skills.
 
--   🔭 I’m currently working on [Taller Web I](https://github.com/gonzaviale/taller-web1).
-
--   🌱 I’m currently learning **English, Typescript and Tailwind**.
-
--   👨‍💻 All of my projects are available at [repostories](https://github.com/MacielMaximiliano?tab=repositories).
-
--   ⚡ Fun fact **I love listening to music, drinking mate and, of course, programming!**.
+- 🔭 I’m currently working as a **Backend Developer** at [fixRiver](https://fixriver.com), using **Java Spring Boot**.
+- 🌱 I’m currently learning **English, TypeScript and Tailwind**.
+- 👨‍💻 All of my projects are available at [my repositories](https://github.com/MacielMaximiliano?tab=repositories).
+- ⚡ Fun fact: **I love listening to music, drinking mate and, of course, programming!**
 
 <br>
 <br>
@@ -19,8 +16,6 @@ Hello! I am Maximiliano Maciel, a student of the Web Development Degree at the N
 <br>
 <br>
 
-<br>
-<br>
 <h2 align="center">🔥 Current Streak</h2>
 <p align="center"><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=MacielMaximiliano&" alt="MacielMaximiliano" /></p>
 <br>
@@ -28,12 +23,17 @@ Hello! I am Maximiliano Maciel, a student of the Web Development Degree at the N
 
 <h2 align="center">📋 Project</h2>
 
-On my GitHub profile, you will find a variety of projects I have worked on, from small experiments to larger and more complete projects. Here are some examples:
+One of my most relevant projects is a **course platform** that I am building, where users can sign up, subscribe, and access educational content through video.
 
--   [Pokedex](https://github.com/MacielMaximiliano/Pokedex): My integrative project is a web application that uses the knowledge acquired in front-end, back-end and database development.
+This project includes the integration of:
 
-I am always looking for opportunities to improve my skills and learn new things, so I would love to receive feedback and suggestions on any projects you find on my profile.
+- 🎥 **Vimeo API** to deliver private, high-quality video content per course.
+- 💬 **WhatsApp Business API** to verify phone numbers and send notifications.
+- 💳 **Stripe API** for managing monthly subscriptions and secure payments.
 
+The platform combines front-end, back-end and third-party API integration, following clean architecture and security best practices (such as JWT and OAuth2).
+
+I’m constantly working to improve and expand it, so feel free to explore the repositories and share your feedback!
 <br>
 <br>
 <h2 align="center">🏆 Trophies</h2>
