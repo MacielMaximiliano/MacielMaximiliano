@@ -1,127 +1,387 @@
-<h1 align="center">Welcome to my GitHub profile! 👋</h1>  
-  
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=MacielMaximiliano&label=Profile%20views&color=0e75b6&style=flat" alt="MacielMaximiliano" /> </p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Portfolio | Backend • Java • Spring</title>
+  <meta name="description" content="Portfolio minimalista con animaciones para GitHub Pages. Backend, Java y Spring Boot." />
+  <style>
+    /* ====== Reset & base ====== */
+    *, *::before, *::after { box-sizing: border-box; }
+    :root {
+      --bg: #0b0f13;
+      --bg-soft: #0f141a;
+      --text: #e8eef6;
+      --muted: #a7b1c2;
+      --card: #0f141a;
+      --accent: #6ee7ff; /* cian */
+      --accent-2: #7ee787; /* verde */
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    :root.light {
+      --bg: #f6fafc;
+      --bg-soft: #eef4f9;
+      --text: #111318;
+      --muted: #4b5563;
+      --card: #ffffff;
+      --accent: #007aff;
+      --accent-2: #10b981;
+      --shadow: 0 10px 20px rgba(2,6,23,.08);
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
 
-Hello! I am Maximiliano Maciel, a student of the Web Development Degree at the National University of La Matanza. I am a person with a great desire to learn and grow professionally, always willing to face new challenges and improve my skills.
+    /* ====== Background Canvas ====== */
+    #bg {
+      position: fixed; inset: 0; z-index: -1;
+      filter: saturate(1.1) contrast(1.05);
+    }
 
-- 🔭 I’m currently working as a **Backend Developer** at [fixRiver](https://fixriver.com), using **Java Spring Boot**.
-- 🌱 I’m currently learning **English, TypeScript and Tailwind**.
-- 👨‍💻 All of my projects are available at [my repositories](https://github.com/MacielMaximiliano?tab=repositories).
-- ⚡ Fun fact: **I love listening to music, drinking mate and, of course, programming!**
+    /* ====== Navbar ====== */
+    .nav {
+      position: sticky; top: 0; z-index: 30;
+      backdrop-filter: blur(10px);
+      background: color-mix(in oklab, var(--bg) 75%, transparent);
+      border-bottom: 1px solid color-mix(in oklab, var(--text) 12%, transparent);
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px;
+    }
+    .brand { font-weight: 800; letter-spacing: .3px; display: flex; gap: 10px; align-items: center; }
+    .brand .dot { width: 10px; height: 10px; border-radius: 999px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 30%, transparent); }
+    .menu { display: flex; gap: 18px; }
+    .menu a { position: relative; padding: 8px 10px; font-weight: 600; color: var(--muted); }
+    .menu a::after { content: ""; position: absolute; left: 10px; right: 10px; bottom: 6px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transform: scaleX(0); transform-origin: left; transition: .35s ease; }
+    .menu a:hover { color: var(--text); }
+    .menu a:hover::after { transform: scaleX(1); }
 
-<br>
-<br>
-<h2 align="center">✨ Stats</h2>
-<p align="center">&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=MacielMaximiliano&show_icons=true&locale=en&v=1.0.1" alt="MacielMaximiliano" /></p>
-<br>
-<br>
+    .actions { display:flex; gap:10px; align-items:center; }
+    .toggle { border: 1px solid color-mix(in oklab, var(--text) 12%, transparent); background: var(--card); color: var(--text); padding: 8px 12px; border-radius: 999px; cursor: pointer; box-shadow: var(--shadow); display:flex; gap:8px; align-items:center; }
 
-<h2 align="center">🔥 Current Streak</h2>
-<p align="center"><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=MacielMaximiliano&" alt="MacielMaximiliano" /></p>
-<br>
-<br>
+    /* ====== Layout blocks ====== */
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+    section { padding: 80px 0; position: relative; }
 
-<h2 align="center">📋 Project</h2>
+    /* ====== Hero ====== */
+    .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 40px; align-items: center; }
+    .kicker { color: var(--muted); font-weight: 700; letter-spacing: .22em; text-transform: uppercase; font-size: .8rem; }
+    .title { font-size: clamp(2rem, 4vw, 3.6rem); line-height: 1.1; font-weight: 900; margin: 8px 0 10px; }
+    .title .gradient { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; position: relative; }
+    .shine { background: linear-gradient(120deg, transparent 0%, transparent 30%, #fff8 50%, transparent 70%, transparent 100%); -webkit-background-clip: text; background-clip: text; animation: shine 4s linear infinite; }
+    @keyframes shine { 0%{ background-position: -200% 0 } 100%{ background-position: 200% 0 } }
 
-One of my most relevant projects is a **course platform** that I am building, where users can sign up, subscribe, and access educational content through video.
+    .lead { color: var(--muted); font-size: 1.08rem; }
+    .cta { display:flex; gap:12px; margin-top: 22px; }
+    .btn { padding: 12px 16px; border-radius: 12px; font-weight: 700; border: 1px solid color-mix(in oklab, var(--text) 14%, transparent); background: var(--card); box-shadow: var(--shadow); }
+    .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color:#071017; border: none; }
+    .terminal {
+      border-radius: var(--radius); background: var(--card); border: 1px solid color-mix(in oklab, var(--text) 12%, transparent); padding: 18px; box-shadow: var(--shadow);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; overflow: hidden; position: relative;
+    }
+    .dots { display:flex; gap:8px; margin-bottom: 10px; }
+    .dot-r { width:10px; height:10px; border-radius:999px; background:#ff5f56; }
+    .dot-y { width:10px; height:10px; border-radius:999px; background:#ffbd2e; }
+    .dot-g { width:10px; height:10px; border-radius:999px; background:#27c93f; }
+    .type { white-space: pre-wrap; font-size: .96rem; }
 
-This project includes the integration of:
+    /* ====== Skills ====== */
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(12, 1fr); }
+    .col-4 { grid-column: span 4; }
+    .col-6 { grid-column: span 6; }
+    .col-12 { grid-column: span 12; }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .col-4 { grid-column: span 6; }
+      .col-6 { grid-column: span 12; }
+    }
+    @media (max-width: 640px) {
+      .col-4 { grid-column: span 12; }
+    }
 
-- 🎥 **Vimeo API** to deliver private, high-quality video content per course.
-- 💬 **WhatsApp Business API** to verify phone numbers and send notifications.
-- 💳 **Stripe API** for managing monthly subscriptions and secure payments.
+    .card { background: var(--card); border: 1px solid color-mix(in oklab, var(--text) 12%, transparent); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); transition: transform .3s ease, border-color .3s ease; position: relative; }
+    .card:hover { transform: translateY(-6px); border-color: color-mix(in oklab, var(--accent) 40%, transparent); }
+    .card h3 { margin: 0 0 8px; }
+    .badges { display:flex; flex-wrap: wrap; gap: 8px; }
+    .badge { padding: 6px 10px; border-radius: 999px; border: 1px solid color-mix(in oklab, var(--text) 14%, transparent); font-size: .85rem; }
 
-The platform combines front-end, back-end and third-party API integration, following clean architecture and security best practices (such as JWT and OAuth2).
+    /* tilt indicator */
+    .card::after { content:""; position:absolute; inset:0; border-radius: inherit; pointer-events:none; background: radial-gradient(600px circle at var(--mx,50%) var(--my,50%), color-mix(in oklab, var(--accent) 20%, transparent), transparent 40%); opacity: 0; transition: opacity .2s; }
+    .card:hover::after { opacity: 1; }
 
-I’m constantly working to improve and expand it, so feel free to explore the repositories and share your feedback!
-<br>
-<br>
-<h2 align="center">🏆 Trophies</h2>
-<p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=MacielMaximiliano" alt="MacielMaximiliano " /></a> 
-<br>
-<br>
+    /* ====== Proyectos ====== */
+    .projects { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+    .repo { position: relative; }
+    .repo h4 { margin: 0 0 6px; font-size: 1.05rem; }
+    .repo p { margin: 0 0 10px; color: var(--muted); min-height: 2.4em; }
+    .repo .meta { display:flex; gap:12px; align-items:center; color: var(--muted); font-size: .9rem; }
 
-<h2 align="center">⚡ Languages and Tools</h2>
-<table align="center" >
-  <tr>
-    <td align="center" width="96"> 
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="40" height="40"/> </a>
-    <br>Javascript
-    </td>
-    <td align="center" width="96"> 
-    <a href="https://www.typescriptlang.org/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg" alt="TypeScript" width="40" height="40"/> </a>
-    <br>TypeScript
-    </td>
-    <td align="center" width="96"> 
-<a href="https://www.w3.org/html/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg" alt="html5" width="40" height="40"/> </a>
-<br>HTML
-    </td>
-    <td align="center" width="96"> 
-<a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> 
-<br>CSS
-    </td>
-    <td align="center" width="96"> 
-<a href="https://www.php.net/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/php/php-horizontal.svg" alt="PHP" width="40" height="40"/> </a>
-<br>PHP
-    </td>
-    <td align="center" width="96"> 
-<a href="https://www.java.com/es/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/java/java-vertical.svg" alt="Redux" width="40" height="40"/> </a>
-<br>Java
-    </td>
-    <td align="center" width="96"> 
-<a href="https://reactjs.org/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="react" width="40" height="40"/> </a> 
-<br>React
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="96">  <a href="https://nodejs.dev/en/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Linux" width="40" height="40"/> </a>
-<br>NodeJs
-    </td>
-    <td align="center" width="96"> 
-<a href="https://expressjs.com/en/5x/api.html" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" height="40"/> </a>
-<br>Express
-    </td>
-     <td align="center" width="96">  
-<a href="https://www.mysql.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="postgresql" width="40" height="40"/> </a>
-<br>MySql
-    </td>
-    <td align="center" width="96">  
-<a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
-<br>Git
-</td>
-    <td align="center" width="96"> 
-    <a href="https://getbootstrap.com" target="_blank" rel=" noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40 "/> </a>  
-    <br>Bootstrap
-    </td>
-  <td align="center" width="96">
-  <a href="https://sequelize.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/sequelizejs/sequelizejs-icon.svg" alt="Sequelize" width="40" height="40"/> </a> 
-<br>Sequelize
-  </td>
-      <td align="center" width="96">
-  <a href="https://www.mongodb.com/es" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" alt="MongoDB" width="40" height="40"/> </a> 
-<br>MongoDB
-  </td>
-</table>
+    /* ====== Reveal on scroll ====== */
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.show { opacity: 1; transform: none; }
 
-<br>
-<br>
-<h2 align="center">📓 Top languages usage</h2>
-<p align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs?username=MacielMaximiliano&show_icons=true&locale=en&layout=compact&v=1.0.3" alt="MacielMaximiliano" /></p>
-<br>
-<br>
+    /* ====== Footer ====== */
+    footer { padding: 40px 0 60px; text-align: center; color: var(--muted); }
 
-<h2 align="center">📫 Contact</h2>
+    /* ====== Floating icons ====== */
+    .float-icons span { position: absolute; font-size: clamp(16px, 3vw, 26px); opacity: .16; user-select:none; }
+    .float-icons span:nth-child(1){ top:8%; left:6%; animation: drift 18s linear infinite; }
+    .float-icons span:nth-child(2){ top:30%; right:8%; animation: drift 22s linear infinite reverse; }
+    .float-icons span:nth-child(3){ bottom:14%; left:14%; animation: drift 25s linear infinite; }
+    .float-icons span:nth-child(4){ bottom:8%; right:12%; animation: drift 19s linear infinite reverse; }
+    @keyframes drift { 0%{ transform: translateY(0) } 50%{ transform: translateY(-14px) } 100%{ transform: translateY(0) } }
 
-Thank you for visiting my GitHub profile! If you have any questions or would like to know more about my work, please don't hesitate to contact me. I hope to hear from you soon!
+    /* ====== Utility ====== */
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 1, 1); white-space: nowrap; border: 0; }
+    .center { text-align: center; }
+  </style>
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
 
-<p align="center">
-  <a href="https://t.me/MaximilianoGMaciel">
-    <img alt="Telegram" width="22px" src="https://www.vectorlogo.zone/logos/telegram/telegram-icon.svg" style="margin-right: 10px;"/>
-  </a>
-  <a href="mailto:maxishu60@gmail.com">
-    <img alt="Gmail" width="22px" src="https://www.vectorlogo.zone/logos/gmail/gmail-icon.svg" style="margin-right: 10px;"/>
-  </a>
-  <a href="https://www.linkedin.com/in/maximiliano-maciel-7761b1234/">
-    <img alt="LinkedIn" width="22px" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" style="margin-right: 10px;"/>
-  </a>
-</p>
+  <nav class="nav" role="navigation" aria-label="principal">
+    <div class="nav-inner">
+      <a href="#" class="brand" aria-label="Inicio">
+        <span class="dot" aria-hidden="true"></span>
+        <span>TuNombre.dev</span>
+      </a>
+      <div class="menu" role="menubar">
+        <a role="menuitem" href="#sobre">Sobre mí</a>
+        <a role="menuitem" href="#skills">Skills</a>
+        <a role="menuitem" href="#proyectos">Proyectos</a>
+        <a role="menuitem" href="#contacto">Contacto</a>
+      </div>
+      <div class="actions">
+        <button id="themeToggle" class="toggle" title="Cambiar tema" aria-label="Cambiar tema"><span id="themeIcon">🌙</span><span class="hide@sm">Tema</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="hero" id="inicio">
+      <div>
+        <div class="kicker">Backend • Java • Spring Boot</div>
+        <h1 class="title">
+          Hola, soy <span class="gradient shine">Tu Nombre</span>
+        </h1>
+        <p class="lead">Desarrollo APIs robustas, microservicios y sistemas escalables. Me enfoco en <strong>Java</strong>, <strong>Spring Boot</strong>, performance y buenas prácticas DevOps.</p>
+        <div class="cta">
+          <a class="btn primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn" href="#contacto">Contactame</a>
+        </div>
+      </div>
+      <div class="terminal reveal" aria-label="ventana de código" role="region">
+        <div class="dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
+        <pre class="type" id="typewriter" aria-live="polite"></pre>
+      </div>
+      <div class="float-icons" aria-hidden="true">
+        <span>☕</span>
+        <span>🍃</span>
+        <span>{ }</span>
+        <span>⚙️</span>
+      </div>
+    </section>
+
+    <section id="sobre" class="reveal">
+      <div class="grid">
+        <div class="col-6">
+          <div class="card">
+            <h3>Sobre mí</h3>
+            <p>Ingeniero backend con <strong>Java 17+</strong>, <strong>Spring Boot</strong>, <strong>JPA/Hibernate</strong> y <strong>Docker</strong>. Me encantan los patrones de diseño, la observabilidad y automatizar todo lo posible.</p>
+            <div class="badges">
+              <span class="badge">REST</span>
+              <span class="badge">OpenAPI</span>
+              <span class="badge">PostgreSQL</span>
+              <span class="badge">Redis</span>
+              <span class="badge">Kafka/RabbitMQ</span>
+              <span class="badge">JUnit</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <h3>Lo que estoy buscando</h3>
+            <p>Equipos con cultura de código limpio, CI/CD y foco en impacto de negocio. Si tu stack usa Spring y microservicios, ¡hablemos!</p>
+            <a class="btn" href="#contacto">Disponibilidad</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="reveal">
+      <h2 class="center" style="margin:0 0 16px">Stack favorito</h2>
+      <div class="grid">
+        <div class="col-4"><div class="card tilt"><h3>Java & JVM</h3><p>Java 17+, Records, Streams, Loom (cuando aplique).</p><div class="badges"><span class="badge">Gradle/Maven</span><span class="badge">JMH</span><span class="badge">GC Tuning</span></div></div></div>
+        <div class="col-4"><div class="card tilt"><h3>Spring Boot</h3><p>WebFlux/MVC, Data JPA, Security, Validation, Actuator.</p><div class="badges"><span class="badge">OpenAPI</span><span class="badge">MapStruct</span><span class="badge">Flyway</span></div></div></div>
+        <div class="col-4"><div class="card tilt"><h3>Infra & DevOps</h3><p>Docker, K8s básico, Observabilidad y CI/CD.</p><div class="badges"><span class="badge">Docker</span><span class="badge">GitHub Actions</span><span class="badge">Grafana</span></div></div></div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="reveal">
+      <div style="display:flex; align-items:end; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:10px">
+        <h2 style="margin:0">Proyectos</h2>
+        <label for="ghuser" class="sr-only">Usuario de GitHub</label>
+        <div style="display:flex; gap:8px; align-items:center">
+          <input id="ghuser" type="text" placeholder="tu usuario de GitHub" style="padding:10px 12px; border-radius:10px; border:1px solid color-mix(in oklab, var(--text) 14%, transparent); background:var(--card); color:var(--text)"/>
+          <button class="btn" id="loadRepos">Cargar</button>
+        </div>
+      </div>
+      <div class="projects" id="repos" aria-live="polite"></div>
+    </section>
+
+    <section id="contacto" class="reveal">
+      <div class="grid">
+        <div class="col-6"><div class="card">
+          <h3>Contacto</h3>
+          <p>¿Charlamos? Enviame un mensaje y coordinamos.</p>
+          <div class="badges">
+            <a class="badge" href="mailto:tuemail@ejemplo.com" id="email">tuemail@ejemplo.com</a>
+            <a class="badge" href="https://www.linkedin.com/in/TU_LINKEDIN/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="badge" href="https://github.com/TU_USUARIO" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div></div>
+        <div class="col-6"><div class="card">
+          <h3>CV</h3>
+          <p>Descargá mi CV actualizado en PDF.</p>
+          <a class="btn primary" id="cvBtn" href="#">Descargar CV</a>
+        </div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Hecho con Java ☕ y Spring 🍃 — © <span id="year"></span>
+  </footer>
+
+  <script>
+    // ========= Config rápida =========
+    const CONFIG = {
+      GITHUB_USERNAME: "TU_USUARIO", // ← cambialo o usa el input de la sección
+      RESUME_URL: "#" // coloca aquí el enlace a tu CV en PDF
+    };
+
+    // ========= Theme toggle (persistente) =========
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if (saved) root.classList.toggle('light', saved === 'light');
+    const isLight = () => root.classList.contains('light');
+    const toggleBtn = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const setIcon = () => themeIcon.textContent = isLight() ? '☀️' : '🌙';
+    setIcon();
+    toggleBtn.addEventListener('click', () => {
+      root.classList.toggle('light');
+      localStorage.setItem('theme', isLight() ? 'light' : 'dark');
+      setIcon();
+    });
+
+    // ========= Background Particles =========
+    const canvas = document.getElementById('bg');
+    const ctx = canvas.getContext('2d');
+    let particles = [], W, H, RAF;
+    const DPR = Math.min(2, window.devicePixelRatio || 1);
+    function resize(){
+      W = canvas.width = innerWidth * DPR; H = canvas.height = innerHeight * DPR; canvas.style.width = innerWidth + 'px'; canvas.style.height = innerHeight + 'px';
+      particles = Array.from({length: Math.max(40, Math.min(120, Math.floor(innerWidth/14)))}).map(()=>({
+        x: Math.random()*W, y: Math.random()*H, vx: (Math.random()-.5)*.25*DPR, vy: (Math.random()-.5)*.25*DPR, r: Math.random()*2*DPR + .6*DPR
+      }));
+    }
+    window.addEventListener('resize', resize, {passive:true}); resize();
+    function draw(){
+      const accent = getComputedStyle(root).getPropertyValue('--accent').trim();
+      ctx.clearRect(0,0,W,H);
+      ctx.globalAlpha = .75; ctx.fillStyle = accent; ctx.strokeStyle = accent;
+      for (let i=0;i<particles.length;i++){
+        const p = particles[i]; p.x+=p.vx; p.y+=p.vy;
+        if (p.x<0||p.x>W) p.vx*=-1; if (p.y<0||p.y>H) p.vy*=-1;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2); ctx.fill();
+        for (let j=i+1;j<particles.length;j++){
+          const q = particles[j];
+          const dx=p.x-q.x, dy=p.y-q.y, d=Math.hypot(dx,dy);
+          if (d < 120*DPR) { ctx.globalAlpha = (1 - d/(120*DPR)) * .45; ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y); ctx.stroke(); ctx.globalAlpha=.75; }
+        }
+      }
+      RAF = requestAnimationFrame(draw);
+    }
+    draw();
+
+    // ========= Typewriter =========
+    const lines = [
+      'record UserDto(Long id, String email) {}',
+      '@RestController\nclass HealthController {\n  @GetMapping("/health") String ok(){ return "UP"; }\n}',
+      '@Transactional\npublic void updateMembership(User u) { /* ... */ }',
+      'docker compose up -d  # Postgres + Redis + Grafana',
+    ];
+    let li=0, ci=0, forward=true; const out = document.getElementById('typewriter');
+    function type(){
+      const curr = lines[li];
+      out.textContent = curr.slice(0,ci) + (ci%2 ? '▍' : ' ');
+      ci += forward ? 1 : -1;
+      if (ci > curr.length + 6) forward = false;
+      if (!forward && ci <= 0) { forward = true; li = (li+1) % lines.length; }
+      setTimeout(type, forward ? 30 : 12);
+    }
+    type();
+
+    // ========= Reveal on scroll =========
+    const io = new IntersectionObserver((entries)=> entries.forEach(e=> e.isIntersecting && e.target.classList.add('show')), { threshold:.12 });
+    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+
+    // ========= Tilt cards =========
+    document.querySelectorAll('.tilt').forEach(card=>{
+      card.addEventListener('pointermove', (e)=>{
+        const r = card.getBoundingClientRect();
+        const mx = (e.clientX - r.left)/r.width; const my = (e.clientY - r.top)/r.height;
+        card.style.transform = `rotateX(${(0.5 - my)*6}deg) rotateY(${(mx - 0.5)*6}deg)`;
+        card.style.setProperty('--mx', `${mx*100}%`); card.style.setProperty('--my', `${my*100}%`);
+      });
+      card.addEventListener('pointerleave', ()=> card.style.transform = 'translateY(-6px)');
+    });
+
+    // ========= GitHub Repos =========
+    const repoList = document.getElementById('repos');
+    const ghInput = document.getElementById('ghuser');
+    document.getElementById('loadRepos').addEventListener('click', ()=> loadRepos(ghInput.value.trim()||CONFIG.GITHUB_USERNAME));
+    ghInput.placeholder = CONFIG.GITHUB_USERNAME;
+
+    async function loadRepos(user){
+      if (!user) return; repoList.textContent = 'Cargando repos...';
+      try {
+        const res = await fetch(`https://api.github.com/users/${user}/repos?per_page=12&sort=updated`);
+        if (!res.ok) throw new Error('No se pudo obtener repos');
+        const data = (await res.json()).filter(r=>!r.fork);
+        if (!data.length){ repoList.textContent = 'Sin proyectos públicos aún.'; return; }
+        repoList.innerHTML = data.map(r=> `
+          <article class="card repo">
+            <h4><a href="${r.html_url}" target="_blank" rel="noopener">${r.name}</a></h4>
+            <p>${(r.description||'Proyecto de código abierto').slice(0,120)}</p>
+            <div class="meta">
+              <span>★ ${r.stargazers_count}</span>
+              <span>⑂ ${r.forks_count}</span>
+              ${r.language ? `<span>● ${r.language}</span>` : ''}
+            </div>
+          </article>`).join('');
+      } catch(err){ repoList.textContent = 'Error cargando proyectos 😵'; console.error(err); }
+    }
+    // Carga inicial
+    loadRepos(CONFIG.GITHUB_USERNAME);
+
+    // ========= Util =========
+    document.getElementById('cvBtn').href = CONFIG.RESUME_URL;
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Suave scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=> a.addEventListener('click', e=>{ const id=a.getAttribute('href'); if (id.length>1){ e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'}); } }));
+  </script>
+</body>
+</html>
+
