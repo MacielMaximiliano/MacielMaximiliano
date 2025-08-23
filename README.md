@@ -22,11 +22,11 @@
 
 <!-- HUD estilo consola retro -->
 <pre align="center">
-┌──────────────────────── SYSTEM ────────────────────────┐
-│ PLAYER:    MAXIMILIANO                                 │
-│ CLASS:     BACKEND DEV                                 │
-│ SPECIALS:  CLEAN CODE • TESTING • CI/CD                │
-└────────────────────────────────────────────────────────┘
+🕹️  PLAYER 1 : MAXIMILIANO
+⚙️  ROLE     : BACKEND DEV
+🧩 STACK    : SPRING · MYSQL · POSTGRESQL · PHP · .NET
+✨  SPECIALS : CLEAN CODE · TESTING · CI/CD
+✅  STATUS   : READY — PRESS START ▶
 </pre>
 
 ## 👨‍💻 About
@@ -55,7 +55,7 @@ Me interesan performance, arquitectura limpia, observabilidad y DX.
   <tr><td><b>PHP</b></td><td>🟪🟪🟪🟪🟪⬛⬛⬛⬛⬛</td></tr>
   <tr><td><b>.NET</b></td><td>🟣🟣🟣🟣🟣🟣⬛⬛⬛⬛</td></tr>
 </table>
----
+
 
 ## 🗺️ Roadmap
 - [ ] Microservicios con observabilidad (Logs/Metrics/Tracing)
