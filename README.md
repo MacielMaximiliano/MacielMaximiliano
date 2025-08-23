@@ -17,7 +17,7 @@
 
 <!-- Línea “animada” tipo typing, sutil y centrada -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&pause=1400&center=true&vCenter=true&width=750&height=40&duration=2800&lines=Clean+APIs%2C+solid+architecture%2C+real+impact;Java+17%2B+%7C+Spring+Boot+3+%7C+Docker+%7C+PostgreSQL" alt="typing" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&pause=1400&center=true&vCenter=true&width=750&height=40&duration=2800&lines=Clean+APIs%2C+solid+architecture%2C+real+impact;Java+17%2B+%7C+Spring+Boot+3+%7C+%7C+PostgreSQL" alt="typing" />
 </p>
 
 ---
