@@ -47,15 +47,14 @@ Me interesan performance, arquitectura limpia, observabilidad y DX.
 </p>
 
 <!-- Barras de power estilo arcade -->
-<pre align="center">
-SKILL POWER
-SPRING      ██████████░
-MYSQL       █████████░░
-POSTGRESQL  █████████░░
-PHP         ███████░░░░
-.NET        ████████░░░
-</pre>
-
+### 🔧 Skills (LED Board)
+<table align="center">
+  <tr><td><b>SPRING</b></td><td>🟩🟩🟩🟩🟩🟩🟩🟩🟩⬛</td></tr>
+  <tr><td><b>MYSQL</b></td><td>🟩🟩🟩🟩🟩🟩🟩⬛⬛⬛</td></tr>
+  <tr><td><b>POSTGRESQL</b></td><td>🟦🟦🟦🟦🟦🟦🟦⬛⬛⬛</td></tr>
+  <tr><td><b>PHP</b></td><td>🟪🟪🟪🟪🟪⬛⬛⬛⬛⬛</td></tr>
+  <tr><td><b>.NET</b></td><td>🟣🟣🟣🟣🟣🟣⬛⬛⬛⬛</td></tr>
+</table>
 ---
 
 ## 🗺️ Roadmap
