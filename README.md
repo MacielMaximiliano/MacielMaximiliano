@@ -78,7 +78,7 @@ Me interesan performance, arquitectura limpia, observabilidad y DX.
 
 ---
 
-## 📊 Stats (tema retro oscuro)
+## 📊 Stats 
 <p align="center">
   <img height="165" src="https://github-readme-stats.vercel.app/api?username=MacielMaximiliano&show_icons=true&theme=radical&hide_border=true&custom_title=GitHub%20Stats" alt="stats"/>
   <img height="165" src="https://streak-stats.demolab.com?user=MacielMaximiliano&theme=radical&hide_border=true" alt="streak"/>
