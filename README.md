@@ -1,12 +1,15 @@
-<!-- ───────────────────────────────────────────────────────────────
-     MAXIMILIANO MACIEL — SUPER MARIO DEV PROFILE
-     ─────────────────────────────────────────────────────────────── -->
+
+
 
 <h1 align="center">🍄 MAXIMILIANO MACIEL 🍄</h1>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=16&duration=3000&pause=900&color=E52521&center=true&vCenter=true&repeat=true&width=900&lines=PLAYER+1:+MAXIMILIANO;BACKEND+DEVELOPER;JAVA+SPRING+%7C+DATABASES+%7C+API+CRAFTSMAN" />
 </p>
+
+
+
+
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=MacielMaximiliano&label=COINS&color=F7D046&style=flat" />
