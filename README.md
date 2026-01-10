@@ -81,18 +81,10 @@ Actualmente trabajo en **fixRiver** desarrollando **APIs robustas con Java + Spr
   <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MacielMaximiliano&layout=compact&theme=radical&hide_border=true" />
 </p>
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MacielMaximiliano&theme=react-dark&hide_border=true" />
-</p>
 
----
 
-## 🏆 ACHIEVEMENTS UNLOCKED
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=MacielMaximiliano&theme=onestar&no-bg=true&no-frame=true&row=1&column=6" />
-</p>
 
----
+
 
 ## 📬 PIPE WORLD — CONTACT
 <p align="center">
