@@ -1,68 +1,105 @@
 
-<h1 align="center">Maximiliano Maciel</h1>
-<p align="center"><strong>Backend Developer | Java & Spring Specialist</strong></p>
-<p align="center">
-  <a href="mailto:maxishu60@gmail.com"><img src="https://img.shields.io/badge/Email-maxishu60@gmail.com-blue?style=flat-square&logo=gmail"></a>
-  <a href="https://www.linkedin.com/in/maximiliano-maciel-7761b1234/"><img src="https://img.shields.io/badge/LinkedIn-Maximiliano%20Maciel-0077B5?style=flat-square&logo=linkedin"></a>
-  <a href="https://t.me/MaximilianoGMaciel"><img src="https://img.shields.io/badge/Telegram-@MaximilianoGMaciel-26A5E4?style=flat-square&logo=telegram"></a>
-</p>
-👨‍💻 Professional Summary
-Backend Developer with hands-on experience building robust APIs and scalable systems. Currently working at fixRiver, specializing in Java Spring Boot architectures, database optimization, and clean code practices. Pursuing Web Development degree at UNLaM (Universidad Nacional de La Matanza).
-Core Focus:
-RESTful API design & microservices architecture
-Database performance tuning (MySQL, PostgreSQL)
-CI/CD pipelines & DevOps practices
-Test-driven development (TDD) & code quality
-System observability & monitoring
-🛠️ Technical Stack
-Backend & Frameworks
-<p>
-  <img src="https://skillicons.dev/icons?i=java,spring,php,dotnet,nodejs" />
-</p>
-Databases
-<p>
-  <img src="https://skillicons.dev/icons?i=mysql,postgresql,mongodb,redis" />
-</p>
-DevOps & Tools
-<p>
-  <img src="https://skillicons.dev/icons?i=docker,kubernetes,git,github,gitlab,jenkins" />
-</p>
-Frontend (Familiar)
-<p>
-  <img src="https://skillicons.dev/icons?i=typescript,react,tailwind,html,css" />
-</p>
-💼 Professional Experience
-fixRiver | Backend Developer
-Current Position
-Design and develop scalable REST APIs using Java Spring Boot serving 10K+ daily requests
-Architect database schemas and optimize SQL queries, reducing response times by 40%
-Implement automated testing suites (JUnit, Mockito) achieving 85% code coverage
-Deploy CI/CD pipelines with GitHub Actions and Docker containerization
-Collaborate in agile Scrum teams, participating in code reviews and technical planning
-🚀 Featured Projects
-Educational Course Platform
-Enterprise-grade LMS with subscription management
-Stack: Spring Boot · PostgreSQL · Vimeo API · RabbitMQ
-Features: Monthly subscriptions, video streaming, progress tracking, automated notifications
-Architecture: Clean Architecture · Domain-Driven Design · Microservices-ready
-Educational CRM System
-Student management and communication platform
-Stack: Spring Boot · MySQL · WhatsApp Business API · React
-Features: Student enrollment, membership management, WhatsApp automation, admin dashboard
-Impact: Streamlined communication for 500+ active students
-📊 GitHub Analytics
-<p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=MacielMaximiliano&show_icons=true&theme=github_dark&hide_border=true&count_private=true" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MacielMaximiliano&layout=compact&theme=github_dark&hide_border=true" />
-</p>
-🎓 Education & Certifications
-Web Development — Universidad Nacional de La Matanza (UNLaM) | In Progress
-Advanced English — Currently improving technical English proficiency
-Spring Boot Microservices — Self-taught & project-based learning
-📫 Contact
-Open to opportunities, collaborations, or technical discussions. Reach me at:
-Email: maxishu60@gmail.com
-LinkedIn: linkedin.com/in/maximiliano-maciel-7761b1234
-Telegram: @MaximilianoGMaciel
-<p align="center"><sub>Clean code. Scalable systems. Continuous improvement.</sub></p>
+<h1 align="center">🍄 MAXIMILIANO MACIEL 🍄</h1>
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=16&duration=3000&pause=900&color=E52521&center=true&vCenter=true&repeat=true&width=900&lines=PLAYER+1:+MAXIMILIANO ;BACKEND+DEVELOPER;JAVA+SPRING+%7C+DATABASES+%7C+API+CRAFTSMAN" />
+</p>
+
+
+
+
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=MacielMaximiliano&label=COINS&color=F7D046&style=flat " />
+  <img src="https://img.shields.io/badge/WORLD-1--1-red?style=flat-square " />
+  <img src="https://img.shields.io/badge/LIVES-x99-green?style=flat-square " />
+  <img src="https://img.shields.io/badge/POWER-UP-FIRE%20FLOWER-orange?style=flat-square " />
+</p>
+
+---
+
+<pre align="center">
+🍄 PLAYER     : MAXIMILIANO
+🧱 CLASS      : BACKEND DEVELOPER
+⭐ POWER UPS  : SPRING · SQL · CLEAN ARCH
+🪙 COINS      : APIs · CI/CD · TESTING
+🚩 STATUS     : READY — PRESS START ▶
+</pre>
+
+---
+
+## 🧭 WORLD 1-1 — WHO AM I?
+Backend Developer & Web Dev student (UNLaM).  
+Actualmente trabajo en **fixRiver** desarrollando **APIs robustas con Java + Spring Boot**.
+
+💡 Me enfoco en:
+- Arquitectura limpia
+- Performance & escalabilidad
+- Observabilidad y DX
+- Código mantenible (no spaghetti 🍝)
+
+🎯 Side quests activas:
+- 🌱 Learning **English**
+- 🧪 Testing avanzado
+- 🎨 TypeScript + Tailwind
+
+---
+
+## 🧰 POWER-UPS INVENTORY
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=spring ,mysql,postgres,php,dotnet&perline=5" />
+</p>
+
+### 🔋 POWER LEVELS
+<table align="center">
+  <tr><td><b>SPRING</b></td><td>🔥🔥🔥🔥🔥🔥🔥🔥🔥⬜</td></tr>
+  <tr><td><b>MYSQL</b></td><td>🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜</td></tr>
+  <tr><td><b>POSTGRESQL</b></td><td>🟦🟦🟦🟦🟦🟦🟦⬜⬜⬜</td></tr>
+  <tr><td><b>PHP</b></td><td>🟪🟪🟪🟪🟪⬜⬜⬜⬜⬜</td></tr>
+  <tr><td><b>.NET</b></td><td>🟣🟣🟣🟣🟣🟣⬜⬜⬜⬜</td></tr>
+</table>
+
+---
+
+## 🏗️ WORLD 2-3 — MAIN QUEST
+### 🎓 Plataforma de Cursos
+- Suscripciones mensuales
+- Video privado (Vimeo / Bunny)
+- Notificaciones automáticas
+- Control de progreso
+
+### 🧠 CRM Educativo
+- Integración WhatsApp (Wasend / Whapi)
+- Gestión de alumnos y membresías
+- Comunicación admin ↔ alumnos
+
+---
+
+## 📊 SCOREBOARD
+<p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=MacielMaximiliano&show_icons=true&theme=radical&hide_border=true " />
+  <img height="165" src="https://streak-stats.demolab.com?user=MacielMaximiliano&theme=radical&hide_border=true " />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MacielMaximiliano&layout=compact&theme=radical&hide_border=true " />
+</p>
+
+
+
+
+
+
+## 📬 PIPE WORLD — CONTACT
+<p align="center">
+  <a href="mailto:maxishu60@gmail.com">
+    <img src="https://img.shields.io/badge/GMAIL-maxishu60%40gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white " />
+  </a>
+  <a href="https://t.me/MaximilianoGMaciel ">
+    <img src="https://img.shields.io/badge/TELEGRAM-@MaximilianoGMaciel-0ea5e9?style=for-the-badge&logo=telegram&logoColor=white " />
+  </a>
+  <a href="https://www.linkedin.com/in/maximiliano-maciel-7761b1234/ ">
+    <img src="https://img.shields.io/badge/LINKEDIN-MAXIMILIANO%20MACIEL-10b981?style=for-the-badge&logo=linkedin&logoColor=white " />
+  </a>
+</p>
+
+<p align="center">
+  <sub>🍄 INSERT COIN • SAVE THE PRINCESS • SHIP CLEAN CODE 👾</sub>
+</p>
